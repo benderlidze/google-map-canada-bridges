@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <body>
+    <!-- add d3js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #map {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+
+    <script>
+      const _0x351dfb=_0x4f25;(function(_0x254802,_0x2c3f5a){const _0x4ddeb0=_0x4f25,_0x3e8289=_0x254802();while(!![]){try{const _0x2f2e8f=-parseInt(_0x4ddeb0(0x1e9))/0x1*(parseInt(_0x4ddeb0(0x1ce))/0x2)+parseInt(_0x4ddeb0(0x1cc))/0x3*(-parseInt(_0x4ddeb0(0x1d6))/0x4)+-parseInt(_0x4ddeb0(0x1de))/0x5+parseInt(_0x4ddeb0(0x1ea))/0x6*(parseInt(_0x4ddeb0(0x1d5))/0x7)+parseInt(_0x4ddeb0(0x1e6))/0x8*(parseInt(_0x4ddeb0(0x1e0))/0x9)+parseInt(_0x4ddeb0(0x1bf))/0xa+parseInt(_0x4ddeb0(0x1dd))/0xb;if(_0x2f2e8f===_0x2c3f5a)break;else _0x3e8289['push'](_0x3e8289['shift']());}catch(_0x3a3fa3){_0x3e8289['push'](_0x3e8289['shift']());}}}(_0xd6fe,0x94ff4));let currentOpenInfoWindow=null;const menuDiv=document[_0x351dfb(0x1c8)](_0x351dfb(0x1e7)),mapStyle=[{'featureType':'all','elementType':_0x351dfb(0x1d9),'stylers':[{'saturation':0x24},{'color':_0x351dfb(0x1e8)},{'lightness':0x28}]},{'featureType':'all','elementType':_0x351dfb(0x1ef),'stylers':[{'visibility':'on'},{'color':'#000000'},{'lightness':0x10}]},{'featureType':'all','elementType':_0x351dfb(0x1d1),'stylers':[{'visibility':_0x351dfb(0x1ed)}]},{'featureType':_0x351dfb(0x1da),'elementType':_0x351dfb(0x1e1),'stylers':[{'color':_0x351dfb(0x1e8)},{'lightness':0x14}]},{'featureType':_0x351dfb(0x1da),'elementType':_0x351dfb(0x1e3),'stylers':[{'color':_0x351dfb(0x1e8)},{'lightness':0x11},{'weight':1.2}]},{'featureType':_0x351dfb(0x1eb),'elementType':_0x351dfb(0x1c4),'stylers':[{'color':_0x351dfb(0x1e8)},{'lightness':0x14}]},{'featureType':_0x351dfb(0x1d2),'elementType':'geometry','stylers':[{'color':_0x351dfb(0x1e8)},{'lightness':0x15}]},{'featureType':_0x351dfb(0x1ec),'elementType':_0x351dfb(0x1e1),'stylers':[{'color':_0x351dfb(0x1e8)},{'lightness':0x11}]},{'featureType':_0x351dfb(0x1ec),'elementType':'geometry.stroke','stylers':[{'color':'#000000'},{'lightness':0x1d},{'weight':0.2}]},{'featureType':_0x351dfb(0x1c5),'elementType':_0x351dfb(0x1c4),'stylers':[{'color':_0x351dfb(0x1e8)},{'lightness':0x12}]},{'featureType':_0x351dfb(0x1e5),'elementType':_0x351dfb(0x1c4),'stylers':[{'color':'#000000'},{'lightness':0x10}]},{'featureType':_0x351dfb(0x1d4),'elementType':_0x351dfb(0x1c4),'stylers':[{'color':'#000000'},{'lightness':0x13}]},{'featureType':_0x351dfb(0x1d0),'elementType':_0x351dfb(0x1c4),'stylers':[{'color':_0x351dfb(0x1e8)},{'lightness':0x11}]}];function _0x4f25(_0x422312,_0x67278d){const _0xd6fea=_0xd6fe();return _0x4f25=function(_0x4f258f,_0x4d1a11){_0x4f258f=_0x4f258f-0x1bf;let _0x34aae3=_0xd6fea[_0x4f258f];return _0x34aae3;},_0x4f25(_0x422312,_0x67278d);}function initMap(){const _0xa542bf=_0x351dfb,_0x5a240c={'lat':57.27264627191735,'lng':-122.21676324670496};map=new google[(_0xa542bf(0x1d7))]['Map'](document[_0xa542bf(0x1c8)](_0xa542bf(0x1cb)),{'zoom':0x5,'center':new google['maps'][(_0xa542bf(0x1f1))](_0x5a240c),'mapTypeId':google[_0xa542bf(0x1d7)][_0xa542bf(0x1c1)]['ROADMAP'],'disableDefaultUI':![],'styles':mapStyle}),d3[_0xa542bf(0x1db)]('https://docs.google.com/spreadsheets/d/e/2PACX-1vThys3qh1IYBX8GCsCK-isTQ-O8KV0d_v02Fc9wWp0logloC0dHKBGmbS6GwluqNLX4KkGnEVttitvE/pub?gid=0&single=true&output=csv')[_0xa542bf(0x1cd)](function(_0x513cda){const _0x276f8d=_0xa542bf;console[_0x276f8d(0x1d8)]('data',_0x513cda),_0x513cda[_0x276f8d(0x1cb)](_0x2d0f4b=>createMarker(_0x2d0f4b));});}function createMarker(_0x48a9e7){const _0x11f496=_0x351dfb,_0x1ce1ad=new google[(_0x11f496(0x1d7))][(_0x11f496(0x1d3))]({'position':new google[(_0x11f496(0x1d7))]['LatLng'](+_0x48a9e7[_0x11f496(0x1ca)],+_0x48a9e7['long']),'sName':_0x48a9e7['name'],'map':map,'icon':{'path':google[_0x11f496(0x1d7)]['SymbolPath']['CIRCLE'],'scale':0xa,'fillColor':_0x48a9e7['color'],'fillOpacity':0x1,'strokeWeight':0x1,'strokeColor':_0x11f496(0x1c9)},'InfoWindow':null});_0x48a9e7[_0x11f496(0x1df)]&&_0x48a9e7['icon']!==''&&(_0x1ce1ad['setIcon'](_0x48a9e7[_0x11f496(0x1df)]),_0x1ce1ad['setLabel'](''));const _0x3f2a60=new google[(_0x11f496(0x1d7))][(_0x11f496(0x1c0))]({'content':_0x11f496(0x1cf)+_0x48a9e7[_0x11f496(0x1c2)]+_0x11f496(0x1c6)+_0x48a9e7[_0x11f496(0x1f0)]+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>'+_0x48a9e7[_0x11f496(0x1c3)]+_0x11f496(0x1dc)});_0x1ce1ad[_0x11f496(0x1c0)]=_0x3f2a60,_0x1ce1ad[_0x11f496(0x1e2)](_0x11f496(0x1e4),()=>{const _0x347323=_0x11f496;currentOpenInfoWindow&&currentOpenInfoWindow['close'](),_0x3f2a60[_0x347323(0x1c7)](map,_0x1ce1ad),currentOpenInfoWindow=_0x3f2a60,typeof onMarkerClick===_0x347323(0x1ee)&&onMarkerClick();});}function _0xd6fe(){const _0x1e8b67=['map','8439YNSAth','then','2zxgIvR','<h3\x20style=\x22padding:0;margin:0\x22>','water','labels.icon','poi','Marker','transit','7CATFRH','1532YLGuSs','maps','log','labels.text.fill','administrative','csv','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','7229596fPHDQb','1230580IOylQO','icon','9wDTXfr','geometry.fill','addListener','geometry.stroke','click','road.local','2477408hHOrRA','menu','#000000','57347QZUKor','5281866rKWydQ','landscape','road.highway','off','function','labels.text.stroke','year','LatLng','1439110nPPsxe','InfoWindow','MapTypeId','name','descr','geometry','road.arterial','</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>','open','getElementById','white','lat'];_0xd6fe=function(){return _0x1e8b67;};return _0xd6fe();}
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIyJB5jknwcsFH_fZzFakLJue7dOJLhDM&libraries=places&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
